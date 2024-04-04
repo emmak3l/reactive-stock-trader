@@ -64,6 +64,8 @@ complete the following steps.
 	- edit `ui/.env` and ensure `VUE_APP_ROLLBAR_ACCESS_TOKEN` is set to your token
 1. Running Lagom in development mode is simple. Start by launching the backend services using `sbt`.
 	- `sbt runAll`
+1. If you encounter any errors trying to execute the previous command, `sbt` might be trying to run with the newest version of Java instead of Java 8. To ensure it runs using Java 8, [Install jenv](https://github.com/jenv/jenv) (`brew install jenv` on Mac) and follow the `README` to set your local Java version to `1.8.0.401` before running `sbt runAll` again.
+
 
 The BFF ("backend for frontend") exposes an API on port 9100.
 
